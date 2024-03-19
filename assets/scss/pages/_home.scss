@@ -1,0 +1,679 @@
+// featured section start
+#featured {
+  .featured-container {
+    padding: 120px 70px 0 70px;
+    .row {
+      .product-card {
+        padding: 0;
+        position: relative;
+        span {
+          position: absolute;
+          top: 25px;
+          left: 45px;
+        }
+        img {
+          width: 100%;
+        }
+        .add-to-basket-button {
+          bottom: 45px;
+          right: 45px;
+        }
+        .product-card-details {
+          transform: scaleY(0);
+          position: absolute;
+          width: 350px;
+          height: 350px;
+          max-width: 65%;
+          max-height: 65%;
+          bottom: 35px;
+          right: 35px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          background-color: white;
+          padding: 30px;
+          transform-origin: bottom;
+          transition: 0.4s;
+          .product-detail-content {
+            display: flex;
+            flex-direction: column;
+          }
+          p {
+            margin: 0;
+          }
+          .add-to-fav-button {
+            top: 15px;
+            right: 15px;
+          }
+        }
+      }
+      .product-card:hover .product-card-details {
+        transform: scaleY(1);
+      }
+    }
+  }
+}
+// featured section end
+
+// featured-products section start
+#featured-products {
+  padding: 80px 70px;
+  .featured-products-content {
+    h2 {
+      padding-bottom: 20px;
+    }
+  }
+  .featured-products-filter {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 35px;
+    button {
+      border: none;
+      background: transparent;
+      position: relative;
+    }
+    button::after {
+      content: '';
+      height: 2px;
+      background-color: black;
+      width: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: 0.3s;
+    }
+    button:hover::after {
+      width: 100%;
+    }
+  }
+  .featured-products-container {
+    .featured-products-card {
+      position: relative;
+      box-sizing: border-box;
+      max-height: 600px;
+      border: 1px solid #cacaca;
+      outline: 1px solid transparent;
+      transition: outline 0.35s ease-in;
+      padding: 65px 35px 25px;
+      cursor: pointer;
+      .new-product-icon {
+        top: 35px;
+        left: 35px;
+      }
+      .sale-product-icon {
+        top: 35px;
+        left: 35px;
+      }
+      .swiper-button-next::after,
+      .swiper-button-prev::after {
+        color: black;
+        font-size: 14px;
+        opacity: 0;
+        transition: 0.2s;
+      }
+      .add-to-fav-button {
+        top: 15px;
+        right: 15px;
+      }
+      .add-to-basket-button {
+        bottom: 15px;
+        right: 15px;
+      }
+      .swiper {
+        height: 380px;
+        display: block;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        max-width: 240px;
+        object-fit: cover;
+      }
+
+      .product-card-content {
+        display: flex;
+        flex-direction: column;
+        .product-title {
+          padding-top: 8px;
+        }
+        span {
+          padding-top: 8px;
+        }
+      }
+    }
+    .featured-products-card:hover {
+      border-color: black;
+      outline: 1px solid black;
+      z-index: 3;
+      .swiper-button-next::after,
+      .swiper-button-prev::after {
+        color: black;
+        font-size: 14px;
+        opacity: 1;
+      }
+    }
+  }
+}
+// featured-products section end
+
+//Product Video Section Start
+#product-video {
+  background-image: url('https://dunker.qodeinteractive.com/wp-content/uploads/2022/12/h1-video-img-1.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    svg {
+      background: #000;
+      width: 100px;
+      height: 100px;
+      padding: 25px;
+      border-radius: 50%;
+      fill: #fff;
+    }
+  }
+  #video-container {
+    .remove-video {
+      color: #fff;
+      position: absolute;
+      top: 5%;
+      right: 5%;
+      font-size: 25px;
+      cursor: pointer;
+    }
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 15;
+  }
+
+  #video-frame {
+    width: 80%;
+    height: 80%;
+  }
+}
+//Product Video Section End
+
+// New Collections Section Start
+#new-collection {
+  padding: 40px 0;
+  .section-container {
+    padding: 0 70px;
+  }
+  .row {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .banner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .banner:nth-child(2) {
+    color: red;
+    .banner-title {
+      color: red;
+    }
+  }
+
+  .banner-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    transition: transform 0.4s ease;
+  }
+
+  .banner:hover .banner-container {
+    transform: translateY(-65px);
+    transition: transform 0.4s ease;
+  }
+
+  .banner-img {
+    .img-title {
+      padding: 12px 28px;
+      bottom: 0;
+      position: absolute;
+      right: 0;
+      left: 0;
+      width: 100%;
+
+      h3 {
+        font-size: 25px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .banner-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+    padding: 0 25px;
+    background: #fff;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+
+  h6 {
+    margin-bottom: 0;
+  }
+}
+// New Collections Section End
+
+// Categories Section Start
+#categories {
+  .categories-container {
+    padding: 0 70px;
+    .categories-content {
+      .category-item {
+        
+        padding: 27px 33px 28px;
+        display: inline-flex;
+        text-align: center;
+
+        .category-title {
+          z-index: 3;
+          font-weight: 700;
+          text-transform: uppercase;
+          font-size: 77px;
+          position: relative;
+          white-space: nowrap;
+          .category-count {
+            position: absolute;
+            top: 0px;
+            right: -10px;
+            color: #727272;
+            font-size: 14px;
+          }
+        }
+        
+      }
+      .category-items{
+        display: inline-block;
+        }
+      .product-image {
+        // width: 200px;
+        z-index: 0;
+        display: none;
+        transform: translate(-50%,-50%);
+        transition: transform 0.2s;
+
+      }
+      .category-items:hover .product-image {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        // transform: translate(-50%,-50%);
+        pointer-events: none;
+        z-index: 3;
+        object-fit: cover;
+      }
+  
+      .category-items:hover .product-image:hover {
+        cursor: none;
+      }
+    }
+  }
+}
+// Categories Section End
+
+// Banner Section Start
+#banner {
+  padding-top: 60px;
+
+  .banner-new,
+  .banner-sale {
+    min-height: 80vh;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .banner-new {
+    background-image: url('https://dunker.qodeinteractive.com/wp-content/uploads/2022/12/h1-img-3.jpg');
+    position: relative;
+    .new-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-family: 'Gochi Hand', cursive;
+      font-size: 15rem;
+      text-align: center;
+    }
+  }
+
+  .banner-sale {
+    background-image: url('https://dunker.qodeinteractive.com/wp-content/uploads/2022/12/h1-img-4.jpg');
+    max-width: 100%;
+
+    .sale-text {
+      font-size: 10rem;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      font-family: 'Gochi Hand', cursive;
+    }
+
+    .sale-title {
+      padding: 100px 20px;
+    }
+
+    .discount {
+      padding: 35px 0;
+    }
+  }
+}
+// Banner Section End
+
+// Trending Start
+#trending {
+  padding: 0 70px;
+  .section-title {
+    padding: 0 0 50px 0;
+  }
+  .featured-products-container {
+    .featured-products-card {
+      position: relative;
+      box-sizing: border-box;
+      border: 1px solid #cacaca;
+      outline: 1px solid transparent;
+      transition: outline 0.35s ease-in;
+      padding: 65px 35px 25px;
+      cursor: pointer;
+      .new-product-icon {
+        top: 35px;
+        left: 35px;
+      }
+      .sale-product-icon {
+        top: 35px;
+        left: 35px;
+      }
+      .swiper-button-next::after,
+      .swiper-button-prev::after {
+        color: black;
+        font-size: 14px;
+        opacity: 0;
+        transition: 0.2s;
+      }
+      .add-to-fav-button {
+        top: 15px;
+        right: 15px;
+      }
+      .add-to-basket-button {
+        bottom: 15px;
+        right: 15px;
+      }
+      .swiper {
+        height: 380px;
+        display: block;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: auto;
+        object-fit: cover;
+      }
+
+      .product-card-content {
+        display: flex;
+        flex-direction: column;
+        .product-title {
+          padding-top: 8px;
+        }
+        span {
+          padding-top: 8px;
+        }
+      }
+    }
+    .featured-products-card:nth-child(3) {
+      background-color: #eeedeb;
+      .swiper-slide {
+        background-color: #eeedeb;
+      }
+    }
+    .featured-products-card:nth-child(4) {
+      .swiper-slide {
+        background-color: #000;
+      }
+      background-color: #000;
+      a,
+      span {
+        color: #fff;
+      }
+    }
+    .featured-products-card:hover {
+      border-color: black;
+      outline: 1px solid black;
+      z-index: 3;
+      .swiper-button-next::after,
+      .swiper-button-prev::after {
+        color: black;
+        font-size: 14px;
+        opacity: 1;
+      }
+    }
+  }
+}
+// Trending End
+
+// Categories Slider Start
+#categories-slider {
+  background: #161616;
+  padding: 119px 25px 120px 25px;
+  .swiper-slide {
+    width: 120px;
+    margin-right: 65px;
+    .category-element {
+      text-transform: uppercase;
+      h5 {
+        font-size: 12px;
+        color: #727272;
+        font-weight: 700;
+      }
+    }
+  }
+}
+// Categories Slider End
+
+// Street Vibe Section Start
+#street-vibe {
+  background-image: url('https://dunker.qodeinteractive.com/wp-content/uploads/2023/01/h1-parallax-img-001.jpg');
+  min-height: 700px;
+  background-position: center;
+  background-size: cover;
+  min-height: 700px;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  max-width: 100%;
+  .street-title {
+    padding-right: 40px;
+    margin-left: auto;
+    display: block;
+    width: 366px;
+    h2 {
+      font-weight: 700;
+      color: black;
+      font-size: 60px;
+    }
+    span {
+      font-family: sans-serif;
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: gray;
+    }
+    .custom-button {
+      margin-top: 20px;
+      display: inline-block;
+    }
+  }
+}
+// Street Vibe Section End
+
+// Elementor Section Start
+#elementor-section {
+  border-collapse: collapse;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  div {
+    text-align: center;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+  }
+  div:hover {
+    border: 1px solid black;
+  }
+}
+// Elementor Section End
+
+//Media Queries//
+@media screen and (max-width: 480px) {
+  //Featured Section
+  #featured {
+    .featured-container {
+      .row {
+        .product-card {
+          .product-card-details {
+            max-width: 100%;
+            max-height: 100%;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  // Product Video Section
+  #product-video {
+    min-height: 250px;
+  }
+
+  // Street Vibe Section
+  #street-vibe {
+    .street-title {
+      text-align: left;
+      margin-right: auto;
+      margin-left: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  //Banner Section
+  #banner {
+    .banner-new {
+      .new-title {
+        font-size: 10rem;
+        text-align: center;
+      }
+    }
+
+    .sale-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 100%;
+      width: 100%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    .banner-sale {
+      .sale-text {
+        display: block;
+        width: 100%;
+        height: 25%;
+        font-size: 8rem;
+      }
+      .discount {
+        padding: 20px 0px 40px 0px;
+      }
+    }
+  }
+
+  //Categories Section
+  #categories {
+    .categories-container {
+      padding: 0 70px;
+      .categories-content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        .category-item {
+          display: inline-flex;
+          border-bottom: 1px solid #ccc;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+          .category-title {
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 44px;
+
+            position: relative;
+            white-space: nowrap;
+            .category-count {
+              position: absolute;
+              top: 0px;
+              right: -10px;
+              color: #727272;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
